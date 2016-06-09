@@ -26,7 +26,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
@@ -253,8 +252,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Reads an InputStream and converts it to a String.
-    public String readIt(InputStream stream) throws IOException, UnsupportedEncodingException {
+    public String readIt(InputStream stream) throws IOException {
         StringBuilder builder = new StringBuilder();
         BufferedReader responseReader = new BufferedReader(new InputStreamReader(stream));
         String line = responseReader.readLine();
